@@ -8,6 +8,7 @@ CAMERA_IP = '192.168.0.64'
 CAMERA_PORT = 554
 
 CAMERA_URI = f'rtsp://{CAMERA_USER}:{CAMERA_PASS}@{CAMERA_IP}:{CAMERA_PORT}/MPEG-4/ch1/main/av_stream'
+print(CAMERA_URI)
 
 start_time = time.time()
 cap = cv2.VideoCapture(CAMERA_URI)

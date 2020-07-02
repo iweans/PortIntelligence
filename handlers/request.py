@@ -21,7 +21,9 @@ class PedestrainDetHandler(RequestHandler):
 
         if 'form' in content_type:
             self.application.intelligence.put_direct({
+                'task_type': 'pedestrain_det',
                 'task_id': self.get_argument('taskId'),
+                'action': self.get_argument('action'),
                 'send_time': float(self.get_argument('sendTime')),
                 'recv_time': recv_time,
                 'camera_ip': self.get_argument('cameraIp'),
