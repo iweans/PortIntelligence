@@ -19,15 +19,13 @@ class Intelligence(object):
                          f"{direct['camera_port']}/" \
                          f"{direct['camera_uri_path']}"
 
-            print(camera_uri)
-
             start_time = time.time()
             cap = cv2.VideoCapture(camera_uri)
             if not cap.isOpened():
                 print('摄像头连接失败！')
                 exit()
             end_time = time.time()
-            print(f'连接摄像头延时: {1000 * (end_time - start_time)}ms')
+            print(f'连接摄像头延时: {1000 * (end_time - start_time):.4f} ms')
 
 
             # current_time = time.time()
